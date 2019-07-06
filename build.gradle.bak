@@ -1,0 +1,147 @@
+plugins {
+    
+    id 'java'
+    
+//    id 'war'
+    
+    // publish
+//    id 'maven'
+//    id 'maven-publish'
+    
+    id 'application'
+    
+    // if apply false, dependency-management plugin will not import spring-boot-dependencies bom base spring boot plugin
+    id 'org.springframework.boot' version '2.1.6.RELEASE' // apply true
+    
+    id "io.spring.dependency-management" version "1.0.6.RELEASE"
+}
+
+group 'com.zheng.springboot'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
+    mavenLocal()
+    mavenCentral()
+}
+
+// management dependencies as maven 
+dependencyManagement {
+    // manual import spring-boot-dependencies bom if spring boot plugin config apply false
+//    imports {
+//        mavenBom org.springframework.boot.gradle.plugin.SpringBootPlugin.BOM_COORDINATES
+//    }
+    
+    dependencies {
+       dependency 'junit:junit:4.12'
+    }
+}
+
+
+dependencies {
+    testCompile(
+            'junit:junit'
+    )
+
+    // package war 
+//    providedRuntime(
+//            'org.springframework.boot:spring-boot-starter-tomcat' 
+//    )
+    
+    // dependency-management plugin import spring-boot-dependencies bom automatic, version in here
+    // https://github.com/spring-projects/spring-boot/blob/v2.1.6.RELEASE/spring-boot-project/spring-boot-dependencies/pom.xml
+    implementation(
+            'org.springframework.boot:spring-boot-starter-web'
+    )
+}
+
+// use ext[pomProperties] to override dependencies version
+//ext['slf4j.version'] = '1.7.20'
+
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+// don't build general archives
+jar {
+    enabled = false
+}
+
+bootJar {
+    classifier = 'boot'
+    // main class 1 : if not set, bootJar task will automic lookup main class
+//    mainClassName = 'com.zheng.springboot.HelloWorldApp'
+    manifest {
+//        attributes 'Start-Class': 'com.zheng.springboot.HelloWorldApp'
+//        attributes 'Hi': 'spring boot'
+    }
+    // default devtools is open
+//    excludeDevtools = false
+}
+
+//springBoot {
+//    // main class 2: mainClassName property also can be set project range
+//    mainClassName = 'com.zheng.springboot.example01helloworld.HelloWorldExample'
+//}
+
+// main class 3: 
+// if use application plugin, must config mainClassName
+mainClassName = 'com.zheng.springboot.SpringBootApp'
+
+
+
+//war {
+//    enabled = false
+//}
+
+//bootWar {
+//    classifier = 'boot'
+//}
+
+
+// publish
+//uploadBootArchives {
+//    repositories {
+//        mavenDeployer {
+//            repository url: 'http://repo.example.com'
+//        }
+//    }
+//}
+
+
+//publishing {
+//    publications {
+//        bootJava(MavenPublication) {
+//            artifact bootJar
+//            artifact bootWar
+//        }
+//    }
+//
+//    repositories {
+//        maven {
+//            url 'https://repo.example.com'
+//        }
+//    }
+//}
+
+
+// run application
+// default bootRun will lookup main class automatically 
+//bootRun{
+//    main = 'com.zheng.springboot.HelloWorldApp'
+//    sourceResources sourceSets.main
+//}
+
+
+// run application use gradlew
+// 1. run build setup -> wrapper
+// 2. cmd> gradlew.bat bootRun
+// pass arguments to command:
+// ./gradlew bootRun --args = '--spring.profiles.active=dev'
+
