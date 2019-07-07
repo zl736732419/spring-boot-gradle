@@ -1,5 +1,6 @@
 package com.zheng.springboot.example01helloworld;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,11 @@ public class HelloWorldExample {
     @RequestMapping("/")
     public String home() {
         return "Hello World!";
+    }
+    
+    @RequestMapping("/hi/{body}")
+    public String hi(@PathVariable("body") String body) {
+        return body;
     }
     
 }

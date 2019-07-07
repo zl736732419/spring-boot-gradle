@@ -26,6 +26,14 @@ dependencyManagement {
     }
 }
 
+// developer tools
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+}
+
 dependencies {
     testCompile(
             'junit:junit'
@@ -35,9 +43,17 @@ dependencies {
     implementation(
             'org.springframework.boot:spring-boot-starter-web'
     )
+    
+    developmentOnly(
+            'org.springframework.boot:spring-boot-devtools'
+    )
 }
 
 // 项目编码UTF8
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+bootJar {
+    excludeDevtools = false
 }
