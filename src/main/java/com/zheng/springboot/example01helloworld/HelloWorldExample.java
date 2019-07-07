@@ -15,11 +15,11 @@ public class HelloWorldExample {
     
     @RequestMapping("/")
     public String home() {
-        return "Hello World!";
+        return "Hello World! Nice to meet you!";
     }
     
-    @RequestMapping("/hi/{body}")
-    public String hi(@PathVariable("body") String body) {
+    @RequestMapping("/echo/{msg}")
+    public String echo(@PathVariable("msg") String body) {
         return body;
     }
     
