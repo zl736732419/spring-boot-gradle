@@ -18,7 +18,7 @@ public class HelloWorldExample {
         return "Hello World! Nice to meet you!";
     }
     
-    @RequestMapping("/echo/{msg}")
+    @RequestMapping("/echo1hello/{msg}")
     public String echo(@PathVariable("msg") String body) {
         return body;
     }
