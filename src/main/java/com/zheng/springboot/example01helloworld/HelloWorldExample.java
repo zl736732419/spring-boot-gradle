@@ -1,5 +1,6 @@
 package com.zheng.springboot.example01helloworld;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class HelloWorldExample {
+
+    @Value("${name}")
+    private String name;
+    
+    @RequestMapping("/external")
+    public String externalConfig() {
+        return name;
+    }
     
     @RequestMapping("/")
     public String home() {
@@ -22,5 +31,7 @@ public class HelloWorldExample {
     public String echo(@PathVariable("msg") String body) {
         return body;
     }
+    
+    
     
 }

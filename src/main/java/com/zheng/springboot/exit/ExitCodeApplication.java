@@ -5,22 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-/**
- * <pre>
- *
- *  File:
- *
- *  Copyright (c) 2016, globalegrow.com All Rights Reserved.
- *
- *  Description:
- *  TODO
- *
- *  Revision History
- *  Date,					Who,					What;
- *  2019年07月08日			zhenglian			    Initial.
- *
- * </pre>
- */
+
 @SpringBootApplication
 public class ExitCodeApplication {
     @Bean

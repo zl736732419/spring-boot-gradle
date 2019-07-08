@@ -2,6 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.1.6.RELEASE'
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
+//    id "io.freefair.lombok" version "3.7.4"
 }
 
 group 'com.zheng.springboot'
@@ -38,7 +39,8 @@ configurations {
 
 dependencies {
     testCompile(
-            'junit:junit'
+            'junit:junit',
+            'org.springframework.boot:spring-boot-starter-test'
     )
 
     // https://github.com/spring-projects/spring-boot/blob/v2.1.6.RELEASE/spring-boot-project/spring-boot-dependencies/pom.xml
@@ -49,6 +51,13 @@ dependencies {
     developmentOnly(
             'org.springframework.boot:spring-boot-devtools'
     )
+
+//    compileOnly(
+//            'org.projectlombok:lombok:1.18.6'
+//    )
+//    annotationProcessor(
+//            'org.projectlombok:lombok:1.18.6'
+//    )
 }
 
 
@@ -64,4 +73,5 @@ bootJar {
         attributes 'Implementation-Version':'1.0'
         attributes 'Implementation-Title': 'spring-boot-gradle'
     }
+    mainClassName = 'com.zheng.springboot.SpringBootApp'
 }
