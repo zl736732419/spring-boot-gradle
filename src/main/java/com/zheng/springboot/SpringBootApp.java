@@ -1,8 +1,9 @@
 package com.zheng.springboot;
 
 import com.zheng.springboot.config.MyConfiguration;
-import org.springframework.boot.SpringApplication;
+import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.annotation.Import;
 
 /**
@@ -13,6 +14,14 @@ import org.springframework.context.annotation.Import;
 @Import({MyConfiguration.class})
 public class SpringBootApp {
     public static void main(String[] args) {
-        SpringApplication.run(SpringBootApp.class, args);
+        System.setProperty("spring.main.banner-mode", "console");// off / console / log
+        System.setProperty("spring.banner.location", "custom-banner.txt");
+//        SpringApplication.run(SpringBootApp.class, args);
+        // 流式编程
+        new SpringApplicationBuilder()
+                .sources(SpringBootApp.class)
+//                .listeners(new MyListener())
+                .bannerMode(Banner.Mode.CONSOLE)
+                .run(args);
     }
 }
