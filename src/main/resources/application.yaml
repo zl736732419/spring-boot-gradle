@@ -17,3 +17,22 @@ acme:
     roles: 
       - USER
       - ADMIN
+
+
+# ///////////////////////////logging////////////////////////////
+#spring:
+#  output:
+#    ansi:
+#      enabled: always
+
+logging:
+#  pattern:
+#    console: '%clr(%d{yyyy-MM-dd HH:mm:ss}){yellow} [%clr(%thread){red}] %-5level --- %clr(%logger){green} | %msg%n'
+  file:
+#    max-history: 3
+  group: 
+    tomcat: org.apache.catalina, org.apache.coyote, org.apache.tomcat
+  level: 
+    tomcat: info
+#  path: ./logs
+# ///////////////////////////logging////////////////////////////
