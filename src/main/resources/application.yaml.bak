@@ -1,0 +1,23 @@
+custom:
+  name: application.yaml
+server:
+  host: 192.168.1.100
+  
+---
+spring:
+  profiles: development
+server:
+  host: 127.0.0.1
+  
+---
+spring:
+  profiles: production & eu-central
+server:
+  host: 192.168.1.120
+
+---
+        spring:
+          profiles: default
+          security:
+            user:
+              password: weak

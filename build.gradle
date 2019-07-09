@@ -2,7 +2,7 @@ plugins {
     id 'java'
     id 'org.springframework.boot' version '2.1.6.RELEASE'
     id "io.spring.dependency-management" version "1.0.6.RELEASE"
-//    id "io.freefair.lombok" version "3.7.4"
+    id "io.freefair.lombok" version "3.7.4"
 }
 
 group 'com.zheng.springboot'
@@ -52,12 +52,12 @@ dependencies {
             'org.springframework.boot:spring-boot-devtools'
     )
 
-//    compileOnly(
-//            'org.projectlombok:lombok:1.18.6'
-//    )
-//    annotationProcessor(
-//            'org.projectlombok:lombok:1.18.6'
-//    )
+    compileOnly(
+            'org.projectlombok:lombok:1.18.6'
+    )
+    annotationProcessor(
+            'org.projectlombok:lombok:1.18.6'
+    )
 }
 
 

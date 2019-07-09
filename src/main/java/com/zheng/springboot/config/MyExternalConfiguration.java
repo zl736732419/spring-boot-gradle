@@ -1,7 +1,10 @@
 package com.zheng.springboot.config;
 
+import com.zheng.springboot.config.customvalidate.CustomPropertyValidator;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
+import org.springframework.validation.Validator;
 
 /**
  * <pre>
@@ -24,5 +27,10 @@ import org.springframework.context.annotation.PropertySource;
         value={"classpath:external-config.properties"},
         encoding = "UTF-8")
 public class MyExternalConfiguration {
+    
+    @Bean
+    public static Validator configurationPropertiesValidator() {
+        return new CustomPropertyValidator();
+    }
     
 }

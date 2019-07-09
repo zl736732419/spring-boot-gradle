@@ -23,6 +23,7 @@ public class SpringBootApp {
 //                .listeners(new MyListener())
                 .bannerMode(Banner.Mode.CONSOLE)
                 .properties("name=SpringApplicationBuilder.properties")
+                .addCommandLineProperties(true)
                 .run(args);
     }
 }
