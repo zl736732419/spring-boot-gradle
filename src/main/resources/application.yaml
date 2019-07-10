@@ -43,3 +43,19 @@ spring:
     cache-duration: 3600  # 单位秒
     encoding: UTF-8
   
+# /////////////////////////静态资源///////////////////////////
+  mvc:
+#    static-path-pattern: /resources/**
+    contentnegotiation:
+      favor-parameter: true
+      media-types:
+        plain: text/plain
+        xml: text/xml
+      favor-path-extension: true
+    pathmatch:
+  #      use-suffix-pattern: true
+      use-registered-suffix-pattern: true
+      
+
+  resources:
+    static-locations: classpath:/static/, classpath:/app/

@@ -63,10 +63,10 @@ public class HelloWorldExample implements EnvironmentAware {
         return name;
     }
     
-    @RequestMapping("/")
-    public String home() {
-        return "Hello World! Nice to meet you!";
-    }
+//    @RequestMapping("/")
+//    public String home() {
+//        return "Hello World! Nice to meet you!";
+//    }
     
     @RequestMapping("/echo1hello/{msg}")
     public String echo(@PathVariable("msg") String body) {
