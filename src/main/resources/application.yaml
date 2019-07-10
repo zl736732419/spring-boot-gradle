@@ -37,15 +37,20 @@ logging:
 #  path: ./logs
 # ///////////////////////////logging////////////////////////////
 
+# ////////////////////////// i18n /////////////////////////////
 spring:
   messages:
     basename: i18n/messages
     cache-duration: 3600  # 单位秒
     encoding: UTF-8
-  
-# /////////////////////////静态资源///////////////////////////
+
+# ///////////////////////// static resources ///////////////////////////
   mvc:
 #    static-path-pattern: /resources/**
+    resources:
+      static-locations: classpath:/static/, classpath:/app/
+  
+# ////////////////////////Path Matching & Content Negotiation ///////////////  
     contentnegotiation:
       favor-parameter: true
       media-types:
@@ -55,7 +60,4 @@ spring:
     pathmatch:
   #      use-suffix-pattern: true
       use-registered-suffix-pattern: true
-      
 
-  resources:
-    static-locations: classpath:/static/, classpath:/app/
