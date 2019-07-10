@@ -36,3 +36,10 @@ logging:
     tomcat: info
 #  path: ./logs
 # ///////////////////////////logging////////////////////////////
+
+spring:
+  messages:
+    basename: i18n/messages
+    cache-duration: 3600  # 单位秒
+    encoding: UTF-8
+  

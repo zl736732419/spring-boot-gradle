@@ -36,7 +36,8 @@ public class HelloWorldExample implements EnvironmentAware {
     private AcmeProperties acmeProperties;
     
     private Environment environment;
-
+    
+    
     @Override
     public void setEnvironment(Environment environment) {
         this.environment = environment;
