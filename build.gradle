@@ -38,14 +38,17 @@ configurations {
 }
 
 dependencies {
+    
     testCompile(
             'junit:junit',
             'org.springframework.boot:spring-boot-starter-test'
     )
 
     // https://github.com/spring-projects/spring-boot/blob/v2.1.6.RELEASE/spring-boot-project/spring-boot-dependencies/pom.xml
+    
     implementation(
-            'org.springframework.boot:spring-boot-starter-web'
+            'org.springframework.boot:spring-boot-starter-web',
+            'com.alibaba:fastjson:1.2.58'
     )
     
     developmentOnly(

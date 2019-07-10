@@ -3,7 +3,6 @@ package com.zheng.springboot.i18n;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.i18n.CookieLocaleResolver;
 
 import java.util.Locale;
@@ -25,7 +24,7 @@ import java.util.Locale;
  * </pre>
  */
 @Configuration
-public class I18nConfig extends WebMvcConfigurationSupport {
+public class I18nConfig {
     /**
      * cookie区域解析器
      * @return
