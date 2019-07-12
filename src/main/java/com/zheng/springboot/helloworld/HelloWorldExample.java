@@ -1,4 +1,4 @@
-package com.zheng.springboot.example01helloworld;
+package com.zheng.springboot.helloworld;
 
 import com.zheng.springboot.config.AcmeProperties;
 import org.springframework.beans.factory.annotation.Autowired;
