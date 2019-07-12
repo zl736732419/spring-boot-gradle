@@ -1,4 +1,4 @@
-package com.zheng.springboot.jdbc;
+package com.zheng.springboot.jdbc.template;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,8 +27,8 @@ import lombok.ToString;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class CustomResponse {
-    private Integer status;
-    private String messgae;
-    private Object data;
+public class User {
+    private Long id;
+    private String username;
+    private String password;
 }

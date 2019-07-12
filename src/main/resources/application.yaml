@@ -61,6 +61,14 @@ spring:
   #      use-suffix-pattern: true
       use-registered-suffix-pattern: true
 
+# //////////////////////////////// datasource ///////////////////////////////
+  datasource:
+    url: jdbc:hsqldb:file:D:/hsqldb/testdb
+    username: SA
+    password: 
+    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+
+
 # //////////////////////////// redis ///////////////////////////////////
   redis:
     host: 192.168.3.201
