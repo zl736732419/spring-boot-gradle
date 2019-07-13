@@ -48,7 +48,8 @@ dependencies {
     
     implementation(
             'org.springframework.boot:spring-boot-starter-web',
-            'com.alibaba:fastjson:1.2.58'
+            'com.alibaba:fastjson:1.2.58',
+            'org.springframework.boot:spring-boot-starter-data-redis'
     )
     
     developmentOnly(
