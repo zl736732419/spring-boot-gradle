@@ -48,10 +48,16 @@ dependencies {
     
     implementation(
             'org.springframework.boot:spring-boot-starter-web',
+            
             'com.alibaba:fastjson:1.2.58',
+//          
 //            'org.springframework.boot:spring-boot-starter-data-redis',
+            
             'org.springframework.boot:spring-boot-starter-data-jpa',
-            'org.springframework.boot:spring-boot-starter-cache'
+            
+            'org.springframework.boot:spring-boot-starter-cache',
+            'org.ehcache:jcache:1.0.1',
+            'net.sf.ehcache:ehcache:2.9.1'
     )
     
     runtimeOnly(

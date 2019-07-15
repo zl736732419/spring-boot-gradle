@@ -1,9 +1,9 @@
 package com.zheng.springboot.cache;
 
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
-import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,26 +25,26 @@ import org.springframework.web.bind.annotation.RestController;
  * </pre>
  */
 @RestController
-@EnableCaching
 @RequestMapping("/cache")
+@CacheConfig(cacheNames = {"cache1"})
 public class CacheController {
     
     @RequestMapping("/get/{key}")
-    @Cacheable(value = "cache1", key = "#key")
+    @Cacheable(key = "#key")
     public String cache(@PathVariable("key") String key) {
         System.out.println("execute method without cache!");
         return key;
     }
     
     @RequestMapping("/update/{key}")
-    @CachePut(value = "cache1", key = "#key")
+    @CachePut(key = "#key")
     public String putCache(@PathVariable("key") String key) {
         System.out.println("execute method without cache!");
         return key;
     }
     
     @RequestMapping("/delete/{key}")
-    @CacheEvict(value = "cache1", key = "#key")
+    @CacheEvict(key = "#key")
     public String deleteCache(@PathVariable("key") String key) {
         System.out.println("execute method without cache!");
         return "ok!";
