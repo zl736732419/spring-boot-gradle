@@ -1,9 +1,12 @@
 package com.zheng.springboot.converter;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
+
+import java.io.Serializable;
 
 /**
  * <pre>
@@ -24,8 +27,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @NoArgsConstructor
+@AllArgsConstructor
 @ToString
-public class User {
+public class User implements Serializable {
     private String username;
     private String password;
     private Integer age;

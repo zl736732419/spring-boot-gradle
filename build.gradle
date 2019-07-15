@@ -49,7 +49,11 @@ dependencies {
     implementation(
             'org.springframework.boot:spring-boot-starter-web',
             'com.alibaba:fastjson:1.2.58',
-            'org.springframework.boot:spring-boot-starter-data-redis'
+            'org.springframework.boot:spring-boot-starter-data-redis',
+            
+            'org.apache.commons:commons-pool2',
+            'redis.clients:jedis',
+            'org.apache.commons:commons-lang3:3.9'
     )
     
     developmentOnly(
