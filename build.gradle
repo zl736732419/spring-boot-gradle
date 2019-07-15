@@ -49,9 +49,9 @@ dependencies {
     implementation(
             'org.springframework.boot:spring-boot-starter-web',
             'com.alibaba:fastjson:1.2.58',
-            'org.springframework.boot:spring-boot-starter-data-redis',
-            'com.alibaba:fastjson:1.2.58',
-            'org.springframework.boot:spring-boot-starter-data-jpa'
+//            'org.springframework.boot:spring-boot-starter-data-redis',
+            'org.springframework.boot:spring-boot-starter-data-jpa',
+            'org.springframework.boot:spring-boot-starter-cache'
     )
     
     runtimeOnly(
