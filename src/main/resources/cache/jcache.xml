@@ -29,7 +29,7 @@
                         LRU(Least Recently Used,最近最少使用), LFU(Least Frequently Used,一直以来被访问次数最少的), FIFO(先进先出)
     -->
     
-    <diskStore path="D:/boot-cache"/>
+    <diskStore path="E:/boot-cache"/>
 
     <cache name="cache1"
            eternal="false"

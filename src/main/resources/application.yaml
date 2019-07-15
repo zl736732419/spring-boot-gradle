@@ -63,7 +63,7 @@ spring:
 
 # //////////////////////////////// datasource ///////////////////////////////
   datasource:
-    url: jdbc:hsqldb:file:D:/hsqldb/testdb
+    url: jdbc:hsqldb:file:E:/hsqldb/testdb
     username: SA
     password: 
     driver-class-name: org.hsqldb.jdbc.JDBCDriver
@@ -102,16 +102,16 @@ spring:
     ##### case 1 end 
 
     ##### case 2: use jcache jsr-107, ehcache-jcache implementation 
-    #    type: jcache
-    #    jcache:
-    #      config: classpath:/cache/jcache.xml
-    #      provider: org.ehcache.jcache.JCacheCachingProvider
+#        type: jcache
+#        jcache:
+#          config: classpath:/cache/jcache.xml
+#          provider: org.ehcache.jcache.JCacheCachingProvider
     ##### case 2 end
 
     ##### case 3: use ehcache 2.x
-    #    type: ehcache
-    #    ehcache:
-    #      config: classpath:/cache/ehcache.xml
+#        type: ehcache
+#        ehcache:
+#          config: classpath:/cache/ehcache.xml
     ##### case 3 end
 
     #    ##### case 4 forbidden cache
