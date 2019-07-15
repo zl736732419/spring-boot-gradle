@@ -60,7 +60,10 @@ dependencies {
 
             'org.springframework.boot:spring-boot-starter-cache',
             'org.ehcache:jcache:1.0.1',
-            'net.sf.ehcache:ehcache:2.9.1'
+            'net.sf.ehcache:ehcache:2.9.1',
+            
+            'org.springframework.boot:spring-boot-starter-activemq',
+            'org.messaginghub:pooled-jms'
     )
 
     runtimeOnly(
