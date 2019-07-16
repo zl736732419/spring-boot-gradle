@@ -141,11 +141,11 @@ spring:
   ##### activemq end
   
   ##### rabbitmq
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: guest
+#    password: guest
 #    template:
 #      retry:
 #        enabled: true
