@@ -96,33 +96,33 @@ spring:
   # /////////////////////////// cache ///////////////////////////////////
   cache:
     ##### case 1: use simple cache manager
-    #    type: simple
-    # only use by simple cache(ConcurrentMapCacheManager)
-    #    cache-names: cache1,cache2  
+#    type: simple
+#    # only use by simple cache(ConcurrentMapCacheManager)
+#    cache-names: cache1,cache2  
     ##### case 1 end 
 
     ##### case 2: use jcache jsr-107, ehcache-jcache implementation 
-#        type: jcache
-#        jcache:
-#          config: classpath:/cache/jcache.xml
-#          provider: org.ehcache.jcache.JCacheCachingProvider
+#    type: jcache
+#    jcache:
+#      config: classpath:/cache/jcache.xml
+#      provider: org.ehcache.jcache.JCacheCachingProvider
     ##### case 2 end
 
     ##### case 3: use ehcache 2.x
-#        type: ehcache
-#        ehcache:
-#          config: classpath:/cache/ehcache.xml
+#    type: ehcache
+#    ehcache:
+#      config: classpath:/cache/ehcache.xml
     ##### case 3 end
 
-    #    ##### case 4 forbidden cache
-    #    type: none
-    #    ##### case 4 end
+#    ##### case 4 forbidden cache
+    type: none
+#    ##### case 4 end
 
     ##### case 5 redis cache
-    cache-names: cache1,cache2
-    type: redis
-    redis:
-      time-to-live: 600000 # 10 minutes
+#    cache-names: cache1,cache2
+#    type: redis
+#    redis:
+#      time-to-live: 600000 # 10 minutes
     ##### case 5 end
     
   # /////////////////////////// jms ///////////////////////////////////
@@ -150,4 +150,4 @@ spring:
 #      retry:
 #        enabled: true
 #        initial-interval: 2s
-  ##### end
+  ##### rabbitmq end
