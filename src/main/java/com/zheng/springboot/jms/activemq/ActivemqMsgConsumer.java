@@ -1,4 +1,4 @@
-package com.zheng.springboot.jms;
+package com.zheng.springboot.jms.activemq;
 
 import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import javax.jms.TextMessage;
  * @Date 2019/7/15
  */
 @Component
-public class JmsMsgConsumer {
+public class ActivemqMsgConsumer {
 
     /**
      * 监听test queue

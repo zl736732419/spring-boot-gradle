@@ -1,4 +1,4 @@
-package com.zheng.springboot.jms;
+package com.zheng.springboot.jms.activemq;
 
 import org.apache.activemq.command.ActiveMQQueue;
 import org.apache.activemq.command.ActiveMQTopic;
@@ -21,7 +21,7 @@ import java.util.Objects;
  */
 @RestController
 @RequestMapping("/jms")
-public class JmsController {
+public class ActivemqController {
     
     @Autowired
     private JmsTemplate jmsTemplate;

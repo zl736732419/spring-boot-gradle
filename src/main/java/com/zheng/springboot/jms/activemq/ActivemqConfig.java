@@ -1,4 +1,4 @@
-package com.zheng.springboot.jms;
+package com.zheng.springboot.jms.activemq;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -14,7 +14,7 @@ import javax.jms.ConnectionFactory;
  */
 @Configuration
 @EnableJms
-public class JmsConfig {
+public class ActivemqConfig {
 
     /**
      * 消息topic

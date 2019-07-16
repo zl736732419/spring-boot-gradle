@@ -63,7 +63,9 @@ dependencies {
             'net.sf.ehcache:ehcache:2.9.1',
             
             'org.springframework.boot:spring-boot-starter-activemq',
-            'org.messaginghub:pooled-jms'
+            'org.messaginghub:pooled-jms',
+            'org.springframework.boot:spring-boot-starter-amqp'
+            
     )
 
     runtimeOnly(
