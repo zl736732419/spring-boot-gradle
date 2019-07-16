@@ -151,3 +151,20 @@ spring:
 #        enabled: true
 #        initial-interval: 2s
   ##### rabbitmq end
+  
+  ##### send mail
+  mail:
+    sender: 736732419@qq.com
+    properties:
+      mail: 
+        smtp:
+          connectiontimeout: 5000
+          timeout: 3000
+          writetimeout: 5000
+    host: smtp.qq.com
+    port: 587
+    protocol: smtp
+    username: 736732419
+    # 注意，在使用qq邮箱时，需要生成授权码，并不是直接使用qq登录密码
+    password: irqcnlfgllypbgac
+  ##### send mail end 

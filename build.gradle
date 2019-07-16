@@ -64,7 +64,9 @@ dependencies {
             
             'org.springframework.boot:spring-boot-starter-activemq',
             'org.messaginghub:pooled-jms',
-            'org.springframework.boot:spring-boot-starter-amqp'
+            'org.springframework.boot:spring-boot-starter-amqp',
+            
+            'org.springframework.boot:spring-boot-starter-mail'
             
     )
 
