@@ -141,14 +141,14 @@ spring:
   ##### activemq end
   
   ##### rabbitmq
-#  rabbitmq:
+  rabbitmq:
 #    host: localhost
 #    port: 5672
 #    username: guest
 #    password: guest
-#    template:
-#      retry:
-#        enabled: true
+    template:
+      retry:
+        enable: false
 #        initial-interval: 2s
   ##### rabbitmq end
   
@@ -168,3 +168,8 @@ spring:
     # 注意，在使用qq邮箱时，需要生成授权码，并不是直接使用qq登录密码
     password: irqcnlfgllypbgac
   ##### send mail end 
+  
+  ##### quartz
+  quartz:
+    job-store-type: memory
+  ##### quartz end
