@@ -44,9 +44,12 @@ public class MailController {
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true);
         helper.setTo(receiver);
         helper.setFrom(sender);
-        helper.setText("content: " + content);
+        helper.setText("<html><body>表情包: <img src='cid:emoji'/> <br/> content: " + content + "</body></html>", true);
         // 添加附件
         helper.addAttachment("测试文本文件.txt", new File("C:\\Users\\Administrator\\Desktop\\test.txt"));
+        
+        helper.addInline("emoji", new File("C:\\Users\\Administrator\\Desktop\\emoji\\base64123.jpg"));
+        
         javaMailSender.send(mimeMessage);
         return "ok!";
     }
